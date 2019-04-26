@@ -34,7 +34,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let reg = /[A-J][a-z]+/g;
+  let results = [];
+
+  arr.forEach(city => {
+    return reg.test(city) ? results.push(city) : false;
+  });
+
+  return results;
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +54,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
