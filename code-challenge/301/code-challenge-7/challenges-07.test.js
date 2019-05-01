@@ -6,16 +6,20 @@ Write a function named forLoopTwoToThe that, given an array of integers as input
 You may choose to complete this challenge using a for loop, for...in syntax, or for...of syntax.
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
-
+//Use for of
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+    let numberToPowerOfTwo = [];
+    for (var number of arr) {
+      numberToPowerOfTwo.push(number = Math.pow(2, number));
+    }
+    return numberToPowerOfTwo;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1, but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
-
+//simular to above but forEach
 const forEachTwoToThe = (arr) => {
   // Solution code here...
 };
