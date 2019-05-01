@@ -21,7 +21,16 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 //simular to above but forEach
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+    let myArr = [];
+    arr.forEach( (el) => {
+        let myPow = Math.pow(2,el); 
+        if (el >= 0){
+            myArr.push(myPow);
+        } else {
+            myArr.push( myPow );
+        }
+    });
+    return myArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
