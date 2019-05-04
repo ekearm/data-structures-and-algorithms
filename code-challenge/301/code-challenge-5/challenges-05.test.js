@@ -12,7 +12,7 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
 
-  for (var i = 0; i <= str.length; i++){
+  for (let i = 0; i <= str.length; i++){
     result.push(str.slice(i));
   }
   return result;
@@ -68,7 +68,10 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(el => {
+    let ingredents = el.slice(el.indexOf(' ', 3));
+    result.push(ingredents.slice(1));
+  });
   return result;
 };
 
@@ -80,7 +83,9 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(el => {
+    result.push(el.split(' ').slice(2).join(' '));
+  });
   return result;
 };
 
@@ -93,7 +98,9 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.steps.forEach(el => {
+    result.push(el.split(' ')[0]);
+  });
   return result;
 };
 
@@ -108,7 +115,13 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  let odds = [];
+  for (let i = arr.length; i >= 0; i--){
+    if(arr[i] % 2 === 0){
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,7 +136,13 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if(numberOfCharacters > str.length){
+    return str = '';
+  } else if (numberOfCharacters < 0){
+    return str;
+  } else {
+    return str.slice(0, -numberOfCharacters);
+  }
 };
 
 
