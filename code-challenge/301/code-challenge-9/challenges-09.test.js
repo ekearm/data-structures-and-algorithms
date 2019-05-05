@@ -171,7 +171,12 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  
+  return arr.reduce((acc, curr) => {
+    if(isPrime(curr)){
+      acc++;
+    }
+    return acc;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
