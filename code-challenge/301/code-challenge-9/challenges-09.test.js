@@ -132,7 +132,12 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-   // Solution code here...
+   return arr.reduce((acc, curr) => {
+     if(curr.children){
+       acc += curr.children.length;
+     }
+     return acc;
+   },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,9 +150,7 @@ const calculateAverage = (arr) => {
     let sum = 0
     let arrLen = arr.length;
     arr.reduce( (acc, curr, ind, arr) => {
-      
       sum += curr;
-      
     },0);
     return Math.floor(sum/arrLen);
 };
@@ -168,7 +171,7 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
