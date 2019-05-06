@@ -9,17 +9,14 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
     let res = 0;
-    if (input.length > 0) {
-        input.forEach(arr => {
-         arr.map(num => {
-          if (num === target) {
-            res++;
-          }
-        });
-       });
-     }
-     return res;
-   
+    input.forEach(arr => {
+      arr.map(num => {
+        if (num === target) {
+          res++;
+        }
+      });
+    });
+    return res; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,6 +117,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
+    //Taken from Mike's GitHub
     return data.reduce((acc, cur) => acc.height*1 > cur.height*1 ? acc=cur : acc).name;
 };
 
