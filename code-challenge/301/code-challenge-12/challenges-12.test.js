@@ -131,7 +131,6 @@ const averageDailyTemperature = (weather) => {
       demnomin++;
     });
   });
-  console.log (numera / demnomin);
   return numera / demnomin;
 };
 
@@ -150,7 +149,18 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let lowestAvg = 451;
+  let weekLength = weather[0].length
+  weather.forEach( week => {
+    let total =  week.reduce( (accu, curr) => {
+      return accu + curr
+    });
+    if (lowestAvg > total/weekLength){
+      return lowestAvg = total / weekLength;
+    }
+  });
+  console.log(Math.floor(lowestAvg));
+  return Math.floor(lowestAvg);
 };
 
 /* ------------------------------------------------------------------------------------------------
