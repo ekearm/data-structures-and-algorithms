@@ -100,7 +100,12 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let product = 1;
+  numbers.map( elm => elm.forEach(value => {
+    product *= value
+  })
+  );
+  return product;
 };
 
 /* ------------------------------------------------------------------------------------------------
