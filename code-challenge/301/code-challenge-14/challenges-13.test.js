@@ -79,7 +79,12 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-
+    return arr.reduce ((accu, curr, index, arr) => {
+        if(Number(curr.mass) > Number(arr[0].mass)){
+            accu.push(curr.name);
+        }
+        return accu;
+    }, []).join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
