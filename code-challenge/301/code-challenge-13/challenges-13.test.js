@@ -58,8 +58,16 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-    return arr.filter( el => el.includes(':)'));
-    //console.log(arr.filter( el => el.includes(':)') ? true : false));
+    //return arr.forEach( el => el.includes(':)') ? true : false );
+    let myBool = false;
+    for (let i = 0; i < arr.length; i++){
+      if (arr[i].includes(':)')){
+        myBool = true
+      }else {
+        myBool = false;
+      }
+    }
+    return myBool;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,7 +76,11 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  return arr.filter(el => {
+    if (el.includes(target)){
+      return el;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
