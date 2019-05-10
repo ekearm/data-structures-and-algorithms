@@ -58,16 +58,13 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-    //return arr.forEach( el => el.includes(':)') ? true : false );
-    let myBool = false;
-    for (let i = 0; i < arr.length; i++){
-      if (arr[i].includes(':)')){
-        myBool = true
-      }else {
-        myBool = false;
-      }
-    }
-    return myBool;
+  let myBool = true;
+  for(let i = 0; i < arr.length; i++){
+    if(!arr[i].includes(':)')){
+      myBool = false;
+    } 
+  }
+  return myBool;
 };
 
 /* ------------------------------------------------------------------------------------------------
