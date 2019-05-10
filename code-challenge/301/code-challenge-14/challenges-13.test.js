@@ -100,7 +100,16 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  arr.sort( (a, b) => {
+      if(a[property] < b[property]){
+          return -1
+      } else if (a[property] > b[property]){
+          return 1;
+      } else {
+          return 0;
+      }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
