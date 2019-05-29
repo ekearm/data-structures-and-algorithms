@@ -20,3 +20,5 @@
 - [Combination](https://github.com/ekearm/data-structures-and-algorithms/tree/master/code-challenge/301/code-challenge-14)
 
 ### 401
+- [Array Reverse](https://github.com/ekearm/data-structures-and-algorithms/tree/master/code-challenge/401/arrayReverse)
+- [Array Shift](https://github.com/ekearm/data-structures-and-algorithms/tree/master/code-challenge/401/array_shift)
