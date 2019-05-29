@@ -12,3 +12,4 @@
 - [Filter](https://github.com/ekearm/data-structures-and-algorithms/tree/master/code-challenge/301/code-challenge-8)
 - [Reduce](https://github.com/ekearm/data-structures-and-algorithms/tree/master/code-challenge/301/code-challenge-9)
 - [2D Arrays](https://github.com/ekearm/data-structures-and-algorithms/tree/master/code-challenge/301/code-challenge-10)
+- [Reg-Ex2](https://github.com/ekearm/data-structures-and-algorithms/tree/master/code-challenge/301/code-challenge-11)
