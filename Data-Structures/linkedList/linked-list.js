@@ -75,6 +75,17 @@ class LinkedListNode {
     current.next = newNode;
     current.next.next = temp;
   }
+
+  fromEnd(k){
+    let current = this.head;
+    let listLength = this.length;
+    let counter = listLength - 1;
+    while( counter !== k){
+      current = current.next;
+      counter --;
+    }
+    return current;
+  }
 }
 
 module.exports = exports = LinkedListNode;
