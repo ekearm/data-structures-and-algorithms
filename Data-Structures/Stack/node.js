@@ -1,9 +1,10 @@
 'use strict';
-class Node{
-  constructor (value){
-    this.value = value;
+
+class Node {
+  constructor(value){
+    this.value = value,
     this.next = null;
   }
 }
 
-module.exports = exports = Node;
+module.exports = Node;
