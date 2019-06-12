@@ -1,5 +1,7 @@
 'use strict';
 
+require('./node');
+
 class Queue{
   constructor(){
     this.head = null;
@@ -36,3 +38,5 @@ class Queue{
     return this.head === null;
   }
 }
+
+module.exports = Queue;
