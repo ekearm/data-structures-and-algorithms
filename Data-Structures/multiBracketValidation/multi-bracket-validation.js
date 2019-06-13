@@ -2,7 +2,8 @@
 
 import { isModuleDeclaration } from "@babel/types";
 
-//Import Stack
+require('./stack');
+
 function multiGrouperValidation (input) {
   let theBoys = {
     ')' : '(',
