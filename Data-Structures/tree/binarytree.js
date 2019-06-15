@@ -5,8 +5,6 @@ const Node = require('./node');
 class BinaryTree {
   constructor(node) {
     this.root = node;
-    this.left = node.left;
-    this.right = node.right;
   } 
 
   postOrder(){

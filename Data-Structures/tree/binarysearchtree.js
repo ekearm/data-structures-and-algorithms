@@ -1,9 +1,9 @@
 'use strict';
 
 const Node = require('./node');
-const BT = require('./binarytree');
+require('./binarytree');
 
-class BinarySearchTree extends BinaryTree{
+class BinarySearchTree{
   constructor(node) {
     this.root = node;
   }
@@ -52,9 +52,13 @@ class BinarySearchTree extends BinaryTree{
       currentNode = currentNode.left;
       contains(node);
     }
-    else if (currentNode.right === !undefined && currentNode.left > node)
+    else if (currentNode.right === !undefined && currentNode.right > node){
     currentNode = currentNode.right;
     contains(node);
+    }
+    else{
+      return false;
+    }
   }
 
 }
