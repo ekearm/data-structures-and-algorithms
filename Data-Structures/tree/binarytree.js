@@ -9,20 +9,19 @@ class BinaryTree {
   } 
 
   postOrder(){
+
     let results = [];
 
     let _walk = node => {
       // L R Ro
       //Left
       if(node.left) _walk(node.left);
-      console.log(node.left);
       //right
       if(node.right) _walk(node.right);
       //Ro
       results.push(node.value);
     };
     _walk(this.root);
-    console.log(results);
     return results;
   }
 
