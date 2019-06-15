@@ -17,7 +17,26 @@ describe('BinarySearchTree', () => {
     expect(b.root).toEqual(5);
   });
 
-  it('should return true when a value is found', () => {
-    
+  it('should return false when value is not found', () => {
+    let bs = new BST();
+
+    bs.root = 5;
+    bs.left = 2;
+    bs.right = 7;
+
+    bs.contains(1);
+    expect(false);
+  });
+
+  it('should return true when vsalue is found', () => {
+    let binSerTre = new BST();
+
+    binSerTre.root = 5;
+    binSerTre.left = 2;
+    binSerTre.right = 7;
+
+    binSerTre.contains(7);
+    expect(true);
   })
+
 })
