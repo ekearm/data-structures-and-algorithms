@@ -1,42 +1,11 @@
 'use strict';
 
 const Node = require('./node');
+const BT = require('./binarytree');
 
-class BinarySearchTree {
+class BinarySearchTree extends BinaryTree{
   constructor(node) {
     this.root = node;
-  }
-
-  preOrder(){
-    et results = [];
-
-    let _walk = node => {
-      // Ro L R
-      //Ro
-        results.push(node.value);
-      //Left
-      if(node.left) _walk(node.left);
-      //right
-      if(node.right) _walk(node.right);
-    };
-    _walk(this.root);
-    return results;
-  }
-
-  inOrder(){
-    let results = [];
-
-    let _walk = node => {
-      //L Ro R
-      //Left
-      if(node.left) _walk(node.left);
-      //Ro
-      results.push(node.value);
-      //right
-      if(node.right) _walk(node.right);
-    };
-    _walk(this.root);
-    return results;
   }
 
   add(node) {
@@ -47,6 +16,7 @@ class BinarySearchTree {
     let currentNode = this.root;
 
     while(currentNode){
+
       if(node.value < currentNode.value){
         if(!currentNode.left){
           currentNode.right = node;
@@ -56,17 +26,36 @@ class BinarySearchTree {
         }
       }
 
-
       else if (node.value > currentNode.value){
         //Go Right
         currentNode.right = node;
       }
+
       else { 
         //Duplicate found
         throw new Error('Value already present');
       }
-    }
 
-    
+    }    
   }
+  contains(node) {
+    let currentNode;
+
+    if (currentNode === undefined){
+      currentNode = this.root;
+    };
+
+    if (currentNode === node){
+      return true
+    }
+    else if (currentNode.left === !undefined && currentNode.left < node){
+      currentNode = currentNode.left;
+      contains(node);
+    }
+    else if (currentNode.right === !undefined && currentNode.left > node)
+    currentNode = currentNode.right;
+    contains(node);
+  }
+
 }
+module.exports = BinarySearchTree;
