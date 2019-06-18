@@ -1,5 +1,7 @@
 'use strict';
 
+require('./tree');
+
 module.exports = (treeObj) => {
   let node = treeObj.root;
 
