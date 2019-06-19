@@ -1,10 +1,10 @@
 'use strict';
 
-require('./tree');
+BinaryTree = require('./tree');
 
 class BinarySearchTree extends BinaryTree {
   constructor(node) {
-    this.root = node;
+    super(node);
   }
 
   add(node) {
@@ -18,7 +18,7 @@ class BinarySearchTree extends BinaryTree {
 
       if(node.value < currentNode.value){
         if(!currentNode.left){
-          currentNode.right = node;
+          currentNode.left = node;
           break;
         }else {
           currentNode = currentNode.left;
@@ -27,9 +27,13 @@ class BinarySearchTree extends BinaryTree {
 
       else if (node.value > currentNode.value){
         //Go Right
-        currentNode.right = node;
+        if(!currentNode.right){
+          currentNode.right = node;
+          break;
+        } else {
+          currentNode = currentNode.right;
+        }
       }
-
       else { 
         //Duplicate found
         throw new Error('Value already present');

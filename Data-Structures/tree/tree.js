@@ -56,8 +56,16 @@ class BinaryTree {
     return results;
   }
 
+  breadthFirst(tree){
+    let queue = [tree.root];
+    
+    while(){
+      queue.push();
+      queue.push()
+    }
+
+
+  }
+
 }
-
-
-
 module.exports = BinaryTree;
