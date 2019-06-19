@@ -1,6 +1,6 @@
 'use strict';
 
-BinaryTree = require('./tree');
+const BinaryTree = require('./tree');
 
 class BinarySearchTree extends BinaryTree {
   constructor(node) {

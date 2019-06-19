@@ -1,6 +1,6 @@
 'use strict';
 
-node = require('node.js');
+const node = require('./node');
 
 class BinaryTree {
   constructor(node) {
@@ -59,10 +59,10 @@ class BinaryTree {
   breadthFirst(tree){
     let queue = [tree.root];
     
-    while(){
-      queue.push();
-      queue.push()
-    }
+    // while(){
+    //   queue.push();
+    //   queue.push()
+    // }
 
 
   }
