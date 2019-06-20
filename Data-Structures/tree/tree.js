@@ -60,10 +60,26 @@ class BinaryTree {
     let queue = [tree.root];
     let current = queue.shift();
     while(current){
+      console.log(current);
       queue.push(current.left);
       queue.push(current.right);
       current = queue.shift();
     }
   }
+  findMaximumValue(tree){
+    let queue = [tree.root];
+    let current = queue.shift()
+    let maxValue = tree.root.value;
+    while(current) {
+      if(current.value > maxValue){
+        maxValue = current.value;
+      }
+      queue.push(current.left);
+      queue.push(current.right);
+      current = queue.shift();
+    }
+    return maxValue;
+  }
+  
 }
 module.exports = BinaryTree;
