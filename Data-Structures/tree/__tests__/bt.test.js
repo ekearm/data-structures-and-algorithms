@@ -28,12 +28,12 @@ describe('BinarySearchTree', () => {
   });
   //Cant get it working
   
-  // it('should console log', () => {
-  //   let spy = jest.spyOn(console, 'log');
-  //   tree.breadthFirst(tree);
-  //   expect(spy).toHaveBeenCalled();
-  //   spy.mockRestore();
-  // });
+  it('should console log', () => {
+    let spy = jest.spyOn(console, 'log');
+    tree.breadthFirst(tree);
+    expect(spy).toHaveBeenCalled();
+    spy.mockRestore();
+  });
 
   it('should not modify the tree', () => {
     let root = tree.root;
@@ -44,4 +44,11 @@ describe('BinarySearchTree', () => {
     expect(root.left.left.value).toBe(5);
     expect(root.left.right.value).toBe(11);
   });
+
+  it('should return the maximum value', () => {
+    let result = tree.findMaximumValue(tree);
+
+    expect(result).toBe(19);
+  });
+
 });
