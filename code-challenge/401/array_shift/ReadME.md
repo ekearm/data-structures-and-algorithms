@@ -1,11 +1,12 @@
 # Challenge Summary
 <!-- Short summary or background information -->
+This creates space in the middle of an array in order to place a new value inside
 
 ## Challenge Description
-<!-- Description of the challenge -->
+Alocates a place in the middle of the array shifts everything back one and inserts it
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+This is O(1). 
 
 ## Solution
 <!-- Embedded whiteboard image -->
