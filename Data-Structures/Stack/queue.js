@@ -5,19 +5,17 @@ const Node = require('./node');
 class Queue{
   constructor(){
     this.front = null;
+    this.tail = null;
   }
 
   enqueue(item){
     let node = new Node(item);
-    let curr = this.front;
-
-    if(!this.front){
+    if(this.tail === null) {
       this.front = node;
-    } else{
-      while(curr.next){
-        curr = curr.next;
-      }
-      curr.next = node;
+      this.tail = node;
+    } else {
+      this.tail.next = node;
+      this.tail = this.tail.next;
     }
   }
 
