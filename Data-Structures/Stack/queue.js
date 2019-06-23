@@ -5,20 +5,23 @@ const Node = require('./node');
 class Queue{
   constructor(){
     this.front = null;
+    this.tail = null;
   }
 
   enqueue(item){
-    let node = new Node(item);
-    let curr = this.front;
 
-    if(!this.front){
-      this.front = node;
-    } else{
-      while(curr.next){
-        curr = curr.next;
-      }
-      curr.next = node;
-    }
+    
+    // let node = new Node(item);
+    // let curr = this.front;
+
+    // if(!this.front){
+    //   this.front = node;
+    // } else{
+    //   while(curr.next){
+    //     curr = curr.next;
+    //   }
+    //   curr.next = node;
+    // }
   }
 
   dequeue(){
