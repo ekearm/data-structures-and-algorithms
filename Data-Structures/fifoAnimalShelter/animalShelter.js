@@ -1,7 +1,5 @@
 'use strict';
 
-import { isModuleDeclaration } from "@babel/types";
-
 class AnimalShelter{
   constructor(){
     this.first = null;
@@ -21,7 +19,7 @@ class AnimalShelter{
       return null;
     }
   }
-  dequeueAny(){
+  dequeue(type){
     if(type == 'cat' || type === 'dog'){
       let current = this.first;
       while(type !== current.next.type){
