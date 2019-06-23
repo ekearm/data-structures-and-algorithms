@@ -1,3 +1,4 @@
+
 'use strict;'
 
 function binarySearch(array, target) {
