@@ -9,19 +9,14 @@ class Queue{
   }
 
   enqueue(item){
-
-    
-    // let node = new Node(item);
-    // let curr = this.front;
-
-    // if(!this.front){
-    //   this.front = node;
-    // } else{
-    //   while(curr.next){
-    //     curr = curr.next;
-    //   }
-    //   curr.next = node;
-    // }
+    let node = new Node(item);
+    if(this.tail === null) {
+      this.front = node;
+      this.tail = node;
+    } else {
+      this.tail.next = node;
+      this.tail = this.tail.next;
+    }
   }
 
   dequeue(){
