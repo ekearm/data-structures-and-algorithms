@@ -56,6 +56,21 @@ class BinaryTree {
     return results;
   }
 
+}
+
+class BinarySearchTree{
+  constructor(node) {
+    this.root = node;
+  }
+
+  add(value) {
+    if (!value){
+      return 'Error';
+    }
+    let node = new Node(value)
+    if(!this.root){
+      this.root = node;
+      return node;
   breadthFirst(tree){
     let queue = [tree.root];
     let current = queue.shift();
@@ -65,6 +80,28 @@ class BinaryTree {
       queue.push(current.right);
       current = queue.shift();
     }
+  }
+  contains(value) {
+
+    if(!value){
+      return 'error';
+    }
+    let result = false;
+
+    let walk = node => {
+      if (node.value === value){
+        result = true;
+        return;
+      }
+      else if(node.left !== undefined && value < node.value){
+        walk(node.left);
+      }
+      else if(node.right !== undefined && value > node.value){
+        walk(node.right);
+      }
+    };
+    walk(this.root);
+    return result;
   }
   findMaximumValue(tree){
     let queue = [tree.root];
@@ -82,4 +119,4 @@ class BinaryTree {
   }
   
 }
-module.exports = BinaryTree;
+module.exports = BinaryTree, BinarySearchTree;

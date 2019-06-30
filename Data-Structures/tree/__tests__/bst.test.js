@@ -15,6 +15,13 @@ describe('Class binarySearchTree', () => {
     expect(tree.root).toBe(23);
   });
 
+
+  it('should add a node', () => {
+    let b = new BST();
+    b.add(5);
+    
+    expect(b.root.value).toEqual(5);
+
   it('Can add a left and right child', () => {
     let root = new Node(7);
     let left = new Node(5);
@@ -26,6 +33,7 @@ describe('Class binarySearchTree', () => {
 
     expect(tree.root.left.value).toBe(5);
     expect(tree.root.right.value).toBe(11);
+
   });
 
 });
@@ -60,6 +68,13 @@ describe('BinarySearchTree', () => {
   it ('should postorder the nodes', () => {
     let postorder = tree.postOrder();
 
+
+    binSerTre.contains(7);
+    expect(true);
+  });
+
+});
+
     expect(postorder).toStrictEqual([5,11,7,17,23,19,13]);
   });
 
@@ -69,3 +84,4 @@ describe('BinarySearchTree', () => {
     expect(inorder).toStrictEqual([5,7,11,13,17,19,23]);
   });
 });
+
