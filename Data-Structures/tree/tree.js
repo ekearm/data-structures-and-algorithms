@@ -1,12 +1,6 @@
 'use strict';
 
-class Node {
-  constructor(value, left,right){
-    this.value = value;
-    this.left = left || null;
-    this.right = right || null;
-  }
-} 
+const node = require('./node');
 
 class BinaryTree {
   constructor(node) {
@@ -77,31 +71,15 @@ class BinarySearchTree{
     if(!this.root){
       this.root = node;
       return node;
+  breadthFirst(tree){
+    let queue = [tree.root];
+    let current = queue.shift();
+    while(current){
+      console.log(current);
+      queue.push(current.left);
+      queue.push(current.right);
+      current = queue.shift();
     }
-    let currentNode = this.root;
-
-    while(currentNode){
-
-      if(node.value < currentNode.value){
-        if(!currentNode.left){
-          currentNode.right = node;
-          break;
-        }else {
-          currentNode = currentNode.left;
-        }
-      }
-
-      else if (node.value > currentNode.value){
-        //Go Right
-        currentNode.right = node;
-      }
-
-      else { 
-        //Duplicate found
-        throw new Error('Value already present');
-      }
-
-    }    
   }
   contains(value) {
 
@@ -125,6 +103,20 @@ class BinarySearchTree{
     walk(this.root);
     return result;
   }
+  findMaximumValue(tree){
+    let queue = [tree.root];
+    let current = queue.shift()
+    let maxValue = tree.root.value;
+    while(current) {
+      if(current.value > maxValue){
+        maxValue = current.value;
+      }
+      queue.push(current.left);
+      queue.push(current.right);
+      current = queue.shift();
+    }
+    return maxValue;
+  }
+  
 }
-
-module.exports = BinarySearchTree, BinaryTree, Node ;
+module.exports = BinaryTree, BinarySearchTree;

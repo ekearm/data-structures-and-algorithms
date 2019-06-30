@@ -1,0 +1,16 @@
+{
+  "name": "fifoanimalshelter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "animalShelter.js",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.0.0",
+    "jest": "^24.8.0"
+  }
+}

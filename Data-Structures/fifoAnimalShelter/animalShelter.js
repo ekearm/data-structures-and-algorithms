@@ -2,39 +2,34 @@
 
 class AnimalShelter{
   constructor(){
-    this.cats = new Queue();
-    this.dogs = new Queue();
+    this.first = null;
+    this.back = null;
   }
   
-  enqueue(item, type){
-    if(["dog", "cat"].indexOf(type) == -1) return new Error("Must be a dog or cat");
-    let n = new Node(item);
-    if(type == "cat"){
-      this.cats.add(n);
-    }else{
-      this.dogs.add(n);
+  enqueue(animalObj){
+    if(animalObj.type === 'dog' || animalObj.type === 'cat'){
+      if(!this.back){
+        this.first = animalObj;
+        this.back = animalObj;
+      } else {
+        this.back.next = animalObj;
+        this.back = animalObj;
+      }
+    } else{
+      return null;
     }
   }
-  
-  dequeueAny(){
-    if(this.isEmpty()) throw new Error("all pets adopted");
-    let oldestCat = this.cats.age();
-    let oldestDog = this.dogs.age();
-    /* bigger date code means, it came later, older one will have smaller date code */
-    return oldestCat > oldestDog ? this.dogs.remove() : this.cats.remove();
-  }
-  
-  dequeueCat(){
-    if(this.cats.isEmpty()) throw new Erorr("no more cats");
-    return this.cats.remove();
-  }
-  
-  dequeueDog(){
-    if(this.dogs.isEmpty()) throw new Erorr("no more dogs");
-    return this.dogs.remove();
-  }
-  
-  isEmpty(){
-    return this.cats.isEmpty() && this.dogs.isEmpty();
+  dequeue(type){
+    if(type == 'cat' || type === 'dog'){
+      let current = this.first;
+      while(type !== current.next.type){
+        current.next;
+      }
+      let result = current.next;
+      current.next = result.next;
+      return result;
+    }
+    return null;
   }
 }
+module.exports = AnimalShelter;
