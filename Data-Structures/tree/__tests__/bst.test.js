@@ -14,7 +14,7 @@ describe('BinarySearchTree', () => {
     let b = new BST();
     b.add(5);
     
-    expect(b.root).toEqual(5);
+    expect(b.root.value).toEqual(5);
   });
 
   it('should return false when value is not found', () => {

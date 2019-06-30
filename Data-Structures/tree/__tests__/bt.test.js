@@ -10,45 +10,45 @@ describe('BinaryTree', () => {
     expect(bt).toBeDefined();
   });
 
-//   it('should postOrder', () => {
-//     let bt = new BinaryTree ;
+  //   it('should postOrder', () => {
+  //     let bt = new BinaryTree ;
 
-//     bt.root = 5;
-//     bt.add = 3;
-//     bt.add = 7;
+  //     bt.root = 5;
+  //     bt.add = 3;
+  //     bt.add = 7;
 
-//     bt.postOrder;
+  //     bt.postOrder;
 
-//     //expect(bt.results).toBe(3);
-//     expect(bt.results[0]).toBe(3);
-//     expect(bt.results[1]).toBe(5);
-//     expect(bt.results[2]).toBe(7);
-//   });
+  //     //expect(bt.results).toBe(3);
+  //     expect(bt.results[0]).toBe(3);
+  //     expect(bt.results[1]).toBe(5);
+  //     expect(bt.results[2]).toBe(7);
+  //   });
 
-//   it('should preOrder', () => {
-//     let b = new BinaryTree;
+  //   it('should preOrder', () => {
+  //     let b = new BinaryTree;
 
-//     b = 5;
+  //     b = 5;
 
-//     b.preOrder;
+  //     b.preOrder;
 
-//     expect(b.preOrder.results).toBe(5);
-//     // expect(b.preOrder.results[1]).toBe(3);
-//     // expect(b.preOrder.results[2]).toBe(7);
-//   });
+  //     expect(b.preOrder.results).toBe(5);
+  //     // expect(b.preOrder.results[1]).toBe(3);
+  //     // expect(b.preOrder.results[2]).toBe(7);
+  //   });
 
-//   it('should inOrder', () => {
-//     let binTree = new BinaryTree;
+  //   it('should inOrder', () => {
+  //     let binTree = new BinaryTree;
 
-//     binTree.root = 5;
-//     binTree.add = 3;
-//     binTree.add = 7;
+  //     binTree.root = 5;
+  //     binTree.add = 3;
+  //     binTree.add = 7;
 
-//     binTree.inOrder();
+  //     binTree.inOrder();
 
-//     expect(results.length).toBe(3);
-//     expect(results[0]).toBe(5);
-//     expect(results[1]).toBe(3);
-//     expect(results[2]).toBe(7);
-//   });
+  //     expect(results.length).toBe(3);
+  //     expect(results[0]).toBe(5);
+  //     expect(results[1]).toBe(3);
+  //     expect(results[2]).toBe(7);
+  //   });
 });

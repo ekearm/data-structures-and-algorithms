@@ -69,7 +69,11 @@ class BinarySearchTree{
     this.root = node;
   }
 
-  add(node) {
+  add(value) {
+    if (!value){
+      return 'Error';
+    }
+    let node = new Node(value)
     if(!this.root){
       this.root = node;
       return node;
@@ -99,29 +103,28 @@ class BinarySearchTree{
 
     }    
   }
-  contains(node) {
-    let currentNode;
+  contains(value) {
 
-    if (currentNode === undefined){
-      currentNode = this.root;
+    if(!value){
+      return 'error';
+    }
+    let result = false;
+
+    let walk = node => {
+      if (node.value === value){
+        result = true;
+        return;
+      }
+      else if(node.left !== undefined && value < node.value){
+        walk(node.left);
+      }
+      else if(node.right !== undefined && value > node.value){
+        walk(node.right);
+      }
     };
-
-    if (currentNode === node){
-      return true
-    }
-    else if (currentNode.left === !undefined && currentNode.left < node){
-      currentNode = currentNode.left;
-      contains(node);
-    }
-    else if (currentNode.right === !undefined && currentNode.right > node){
-    currentNode = currentNode.right;
-    contains(node);
-    }
-    else{
-      return false;
-    }
+    walk(this.root);
+    return result;
   }
-
 }
 
 module.exports = BinarySearchTree, BinaryTree, Node ;
