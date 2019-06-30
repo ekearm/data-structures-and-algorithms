@@ -4,11 +4,13 @@
   "description": "",
   "main": "binarysearchtree.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint **/*.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^6.0.1",
     "jest": "^24.8.0"
   }
 }

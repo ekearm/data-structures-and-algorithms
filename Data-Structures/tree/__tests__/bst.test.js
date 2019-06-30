@@ -37,6 +37,6 @@ describe('BinarySearchTree', () => {
 
     binSerTre.contains(7);
     expect(true);
-  })
+  });
 
-})
+});
