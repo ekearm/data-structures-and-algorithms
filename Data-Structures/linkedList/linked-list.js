@@ -84,7 +84,9 @@ class LinkedListNode {
       current = current.next;
       counter --;
     }
-    return current;
+    console.log(current.value);
+  
+    return current.value;
   }
 }
 

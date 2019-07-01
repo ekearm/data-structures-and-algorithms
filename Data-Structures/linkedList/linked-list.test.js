@@ -142,7 +142,7 @@ describe('testing my list', () => {
       expect(() => {
         list.fromEnd(1);
       }).toThrow();
-      expect(list.fromEnd(0).value).toEqual(1);
+      expect(list.fromEnd(0)).toEqual(1);
     });
 
     it('"Happy Path" where k is not at the end, but somewhere in the middle of the linked list', () => {
@@ -152,7 +152,7 @@ describe('testing my list', () => {
       list.insert(4);
       list.insert(5);
 
-      expect(list.fromEnd(3).value).toEqual(4);
+      expect(list.fromEnd(3)).toEqual(4);
     });
   });
 
