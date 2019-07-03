@@ -17,9 +17,16 @@ ___
 
 ### Algorithm:
 
-Create a function called MergeSort which takes an array as a perameter
-  Divide the array in two called a left and right
-  Recursivly call the Mergesort until the array is completly divieded into indivduals
+* Create a function called MergeSort which takes an array as a perameter
+  * Divide the array in two called a left and right
+  * Recursivly call the Mergesort until the array is completly divided into indivduals
+  * Call the helper merge function for each left and right element
+* Create a helper function called merge which takes a left value and a right value
+  * Declare an empty array
+  * Declare a left and right index
+  * while the left index does not equal the length of the left left and the right index does not equal the length of the right
+    * check which value is greater left value or right value
+      * Which ever is push it into the new array
 
 ### Diagram: 
 [Insertion-Sort-Diagram](https://www.geeksforgeeks.org/wp-content/uploads/Merge-Sort-Tutorial.png)
