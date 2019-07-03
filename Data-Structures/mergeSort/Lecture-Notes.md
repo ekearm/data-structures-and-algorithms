@@ -1,64 +1,64 @@
 # Lecture Notes: Insertion Sort
 
 ## Description:
-An algorithm that compares the key element to previous elements in the array. If the previous elements is greater than the key element, then that previous element is moved to the next position.
+An algorithm that goes through an array by dividing and conquer. It first reduces all the elements of the array into its components and then compares each of them. 
 ___
 
 ## Approach & Efficiency
-O(n). This algorithm will take as long as there are items in the array
+O(n log n). Because of the divide and conquer method it can complete the job in lenear time. 
+
 
 ## Is it more efficient than others? 
 
-It depends on the situation. This would be sufficent with small data sets. However, scaling will be a differnt problem since it is O(n).
+It is more effecient then insertion sort. It also doesn't have the scaling issue that insertion did. However, it really depends on what you need merge sort can take longer to program than insertion sort. That scaling though makes it much better when you need to scale. 
 
 ___
 ## Solution
 
 ### Algorithm:
 
-Create a function called insertion sort that takes: \
-An array of numbers
-
-In a for loop create an iterator variable (i) and set it to zero and while i less then the array of numbers: 
-
-The first item is sorted
-
-Compare the sorted value 
-
-Move over any item to allocate room for the item to be added
-
-Insert the value into the correct spot
-
-Repeat for the length of the array O(n)
+Create a function called MergeSort which takes an array as a perameter
+  Divide the array in two called a left and right
+  Recursivly call the Mergesort until the array is completly divieded into indivduals
 
 ### Diagram: 
-[Insertion-Sort-Diagram](https://he-s3.s3.amazonaws.com/media/uploads/46bfac9.png)
+[Insertion-Sort-Diagram](https://www.geeksforgeeks.org/wp-content/uploads/Merge-Sort-Tutorial.png)
 ### Psuedo Code:
 ```
-InsertionSort(int[] arr)
+ALGORITHM Mergesort(arr)
+    DECLARE if arr.length <= 1
+      is so return arr
+    DECLARE a midpoint <-- arr/2
+    DECLARE left <-- arr[0...mid]
+    DECLARE right <-- arr[mid...n]
 
-  FOR i = 1 to arr.length
-  
-    int j <-- i - 1
-    int temp <-- arr[i]
-    
-    WHILE j >= 0 AND temp < arr[j]
-      arr[j + 1] <-- arr[j]
-      j <-- j - 1
-      
-    arr[j + 1] <-- temp
+    CALL Merge(left, right)
+
+ALGORITHM Merge(left, right)
+    DECLARE an empty Array newArr <-- []
+    DECLARE Left-i <-- 0
+    DECLARE Right-i <-- 0
+
+    while Left-i < left.length && right-i < right.length
+        if Left-i < Right-i
+          push Left-i into newArr
+          Left-i++
+        else
+          push Right-i into newArr
+          Right-i++
+    return newArr concatenated with left and right
 ```
 
 
 ## Readings and References
 ### Watch
-[Video](https://www.youtube.com/watch?v=pmDnM9gUxNc)
+[Video](https://www.youtube.com/watch?v=4VqmGXwpLqc)
 ### Read
 
-[Article 1](https://en.wikipedia.org/wiki/Insertion_sort)
+[Article 1](https://en.wikipedia.org/wiki/Merge_sort)
 
-[Article 2](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)
+[Article 2](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort)
 
 Bookmark
 
-[Website](https://www.geeksforgeeks.org/insertion-sort/)
+[Website](https://www.geeksforgeeks.org/merge-sort/)
