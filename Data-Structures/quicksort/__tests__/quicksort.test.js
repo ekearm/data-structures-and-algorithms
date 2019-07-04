@@ -23,4 +23,12 @@ describe('quickSort', () => {
     });
   });
 
+  it('should throw an error if the arg is not an array', () => {
+    let array = [9, 8, 'Hello!!!'];
+    let string = true;
+    expect(() => {
+      quickSort(array, 0, array.length - 1)(string).toThrow();
+    });
+  });
+
 });
