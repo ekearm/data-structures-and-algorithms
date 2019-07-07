@@ -1,0 +1,16 @@
+{
+  "name": "hashtable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hashtable.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint **/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0"
+  }
+}
