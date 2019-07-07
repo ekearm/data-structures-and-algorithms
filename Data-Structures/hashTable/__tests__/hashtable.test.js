@@ -89,3 +89,87 @@ describe('add method', () => {
 
   });
 });
+
+describe('get method', () => {
+  it('should return the correct value if given a key', () => {
+    let hashTable = new HashTable(5);
+    hashTable.add('test', 3);
+    let find = hashTable.get('test');
+
+    expect(find).toBe(3);
+  });
+
+  it('should return null for keys that do not exist in the hashtable', () => {
+    let hashTable = new HashTable(5);
+    hashTable.add('test', 3);
+    let find = hashTable.get('test');
+
+    expect(find).toBe(3);
+  });
+
+  it('should return error if no key is provided', () => {
+    let hashTable = new HashTable(5);
+    let find = hashTable.get;
+
+    expect(find).toThrow();
+  });
+});
+
+describe('contains method', () => {
+  it('should return true if a key is inside the hashtable', () => {
+    let hashTable;
+    hashTable = new HashTable(5);
+    hashTable.add('test', 3);
+    hashTable.add('jest', 3);
+    hashTable.add('request', 3);
+
+    let result = hashTable.contains('request');
+
+    expect(result).toBe(true);
+
+  });
+
+  it('should return null if a key is not inside the hashtable', () => {
+    let hashTable;
+    hashTable = new HashTable(5);
+    hashTable.add('test', 3);
+    hashTable.add('jest', 3);
+    hashTable.add('request', 3);
+
+    let result = hashTable.contains('best');
+
+    expect(result).toBe(null);
+
+  });
+});
+
+
+describe('collisions', () => {
+  it('should succesfully handle any collisions within the hashtable', () => {
+    let hashTable = new HashTable(5);
+
+    hashTable.add('cat', 55);
+    hashTable.add('bbt', 24);
+    hashTable.print();
+
+    expect(hashTable.buckets[3].head.value[0]).toBe('cat');
+    expect(hashTable.buckets[3].head.value[1]).toBe(55);
+    expect(hashTable.buckets[3].head.next.value[0]).toBe('bbt');
+    expect(hashTable.buckets[3].head.next.value[1]).toBe(24);
+
+  });
+
+  it('should successfully retrieve a value from a bucket that has a collision', () => {
+
+    let hashTable = new HashTable(5);
+
+    hashTable.add('cat', 55);
+    hashTable.add('bbt', 24);
+    let find = hashTable.get('cat');
+    let find1 =hashTable.get('bbt');
+  
+    expect(find).toBe(55);
+    expect(find1).toBe(24);
+
+  });
+});
