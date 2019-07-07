@@ -9,3 +9,17 @@ describe('linked list', () => {
     expect(ll).toBeInstanceOf(LinkedList);
   });
 });
+describe('hashtable table', () => {
+  it('should create an empty instance of a hashtable', () => {
+    let hashTable;
+    let expectedSize = 10;
+    hashTable = new HashTable(expectedSize);
+    expect(hashTable).toBeInstanceOf(HashTable);
+    expect(hashTable.size).toBeDefined();
+    expect(hashTable.size).toBe(expectedSize);
+    expect(hashTable.buckets).toBeDefined();
+    expect(hashTable.buckets.length).toBe(expectedSize);
+
+  });
+
+});
