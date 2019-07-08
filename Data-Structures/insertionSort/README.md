@@ -1,15 +1,16 @@
 # Insertion Sort Assigment
 
-	Complete a working, tested implementation of Insertion Sort, based on the pseudo code provided
+Complete a working, tested implementation of Insertion Sort, based on the pseudo code provided
 	
-	## Challenge
+## Challenge
+
+Research and prepare a lecture on the Insertion Sort Algorithm suitable for delivery to 301 level student. Your lecture notes should be the only material an instructor should need to conduct a high quality lecture on the subject.
 	
-	Research and prepare a lecture on the Insertion Sort Algorithm suitable for delivery to 301 level student. Your lecture notes should be the only material an instructor should need to conduct a high quality lecture on the subject.
+## Approach & Efficiency
+O(n^2). This algorithm will take as long as there are items in the array
 	
-	## Approach & Efficiency
-	O(n). This algorithm will take as long as there are items in the array
-	
-	## Solution
+## Solution
+
 	```
 	InsertionSort(int[] arr)
 	
