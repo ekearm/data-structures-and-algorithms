@@ -1,6 +1,7 @@
 'use strict';
 
-let mergeSort = require('..mergeSort');
+// let mergeSort = require('../mergeSort');
+const mergeSort = require ('../mergeSort');
 
 describe('the merge sort function', () => {
   it('Should sort an array with an odd amount of values', () => {
@@ -18,7 +19,7 @@ describe('the merge sort function', () => {
   it('Should sort an array with 1 value', () => {
     let arr = [3];
     let sorted = mergeSort(arr);
-    expect(sorted).toEqual([5]);
+    expect(sorted).toEqual([3]);
     expect(sorted.length).toEqual(1);
   });
 

@@ -1,0 +1,16 @@
+{
+  "name": "mergesort",
+  "version": "1.0.0",
+  "description": "Lecture notes for teaching the Merged Sort Algorithm.",
+  "main": "mergeSort.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint **/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0"
+  }
+}
