@@ -15,4 +15,4 @@ The Big 0 is O(1) in the best case scenero. On the worst case scenero is it is O
 
 * Contains takes a key and returns true if the value is in the hash table or false if it is not
 
-* Hash takes a key and 
+* Hash takes a key and returns a index for the hash
