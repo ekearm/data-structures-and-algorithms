@@ -1,6 +1,6 @@
 'use strict';
 
-const insertionSort = require('../insertionSort');
+const insertionSort = require('../insertionSort.js');
 
 describe('Insertion Sort\'s Description ', () => {
 

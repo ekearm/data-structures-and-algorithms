@@ -5,11 +5,14 @@ An algorithm that compares the key element to previous elements in the array. If
 ___
 
 ## Approach & Efficiency
-O(n). This algorithm will take as long as there are items in the array
+O(n^2). This algorithm will take as long as there are items in the array
 
 ## Is it more efficient than others? 
 
-It depends on the situation. This would be sufficent with small data sets. However, scaling will be a differnt problem since it is O(n).
+It depends on the situation. This would be sufficent with small data sets. However, scaling will be a differnt problem since it is O(n^2).
+
+## Learning Objectives
+To understand the fundamentals of Insertion Sort. 
 
 ___
 ## Solution
