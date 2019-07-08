@@ -5,7 +5,17 @@ An algorithm that goes through an array by dividing and conquer. It first reduce
 ___
 
 ## Approach & Efficiency
-O(n log n). Because of the divide and conquer method it can complete the job in lenear time. 
+O(n log n). Because of the divide and conquer method. 
+
+## Learning Objectives
+To understand the basics of the Merge Sort Algorithm
+
+## Lecture Flow
+* Diagram
+* Example (Maybe have the class merge sort themselves by birthday)
+* Algorithm
+* Pseudocode
+* Readings and videos
 
 
 ## Is it more efficient than others? 
@@ -29,7 +39,7 @@ ___
       * Which ever is push it into the new array
 
 ### Diagram: 
-[Insertion-Sort-Diagram](https://www.geeksforgeeks.org/wp-content/uploads/Merge-Sort-Tutorial.png)
+[Merge-Sort](https://www.geeksforgeeks.org/wp-content/uploads/Merge-Sort-Tutorial.png)
 ### Psuedo Code:
 ```
 ALGORITHM Mergesort(arr)
