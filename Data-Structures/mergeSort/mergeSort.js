@@ -1,5 +1,7 @@
 'use strict';
 
+import { isModuleDeclaration } from "@babel/types";
+
 let mergeSort = arr => {
   if (arr.length <= 1) return arr;
 
@@ -31,3 +33,5 @@ function merge(left, right) {
     .concat(left.slice(leftIndex))
     .concat(right.slice(rightIndex));
 }
+
+module.exports = mergeSort;
