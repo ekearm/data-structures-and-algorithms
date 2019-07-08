@@ -1,7 +1,9 @@
 # Insertion Sort Assigment
+
 	Complete a working, tested implementation of Insertion Sort, based on the pseudo code provided
 	
 	## Challenge
+	
 	Research and prepare a lecture on the Insertion Sort Algorithm suitable for delivery to 301 level student. Your lecture notes should be the only material an instructor should need to conduct a high quality lecture on the subject.
 	
 	## Approach & Efficiency
