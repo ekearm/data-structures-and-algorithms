@@ -1,7 +1,5 @@
 'use strict';
 
-import { isModuleDeclaration } from "@babel/types";
-
 let mergeSort = arr => {
   if (arr.length <= 1) return arr;
 
